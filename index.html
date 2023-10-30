@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+  <title>Thông báo bài tập</title>
+  <style>
+    body {
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 20px;
+      animation: fadeIn 1s;
+    }
+
+    h1 {
+      color: #007BFF;
+    }
+
+    .btn-primary {
+      background-color: #007BFF;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+
+    .alert {
+      animation: slideIn 1s;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(100%);
+      }
+
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    #particles-js {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      /* Đảm bảo hiệu ứng pháo hoa nằm phía sau container */
+    }
+
+    /* Hiệu ứng RGB border */
+    .border-animation {
+      animation: borderRotate 4s linear infinite;
+      border: 6px solid red;
+      /* Tăng độ dày của đường viền */
+    }
+
+    @keyframes borderRotate {
+      0% {
+        border: 2px solid red;
+      }
+
+      25% {
+        border: 2px solid green;
+      }
+
+      50% {
+        border: 2px solid blue;
+      }
+
+      75% {
+        border: 2px solid red;
+      }
+
+      100% {
+        border: 2px solid green;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container border-animation">
+    <h1 class="animate__animated animate__fadeInDown">Thông báo bài tập</h1>
+    <p class="animate__animated animate__fadeIn">Hi all, trong lúc này các bạn đang yên giấc nghỉ trưa, còn mình thì
+      đang căng não code, cơ mà thông báo từ hôm nay mình sẽ start capstone project (Xem trong buổi 9) nhé. Như mình đã
+      nói trên lớp, thì giờ sẽ thống nhất lại như sau.</p>
+    <p class="animate__animated animate__fadeIn">Mình đã random để chọn nhóm cho các bạn trong link bên dưới nha. Có
+      kèm đề tài của mỗi nhóm bên trong luôn.</p>
+    <p class="animate__animated animate__fadeIn">Đối với trang nào có navbar là dạng nút nhấn vào xổ ra, các bạn đc phép
+      đổi giao diện thành dạng navbar nằm ngang như bài meipaly đã làm</p>
+    <p class="animate__animated animate__fadeIn">Làm full animation và responsive</p>
+    <p class="animate__animated animate__fadeIn">Sau khi làm xong thì cách nộp bài như sau:</p>
+    <ul class="animate__animated animate__fadeIn">
+      <li>Các bạn tạo 1 file word, excel, hoặc text bất kì , trong đó liệt kê cho mình các thông tin sau:
+        <ul>
+          <li>Link github chứa source code (nhớ đặt tên repository là tên các thành viên trong nhóm. <b>VD:
+              Member1_Member2_TenDeTai</b>)</li>
+          <li>Link youtube quay màn hình demo dự án (Các bạn có thể dùng phần mềm record màn hình, demo sơ qua dự án và
+            quay
+            lại, up lên youtube và nộp link)</li>
+          <li>Link Web với vercel</li>
+          <li>Thông tin nhóm: họ tên thành viên, các phần đã làm..</li>
+        </ul>
+      </li>
+      <li>Sau đó upload file này gg drive mà nộp lại link</li>
+      <li>Vì hệ thống ko cho gộp nộp chung, nên 2 bạn trong nhóm nộp riêng nhé. (nộp chung 1 link gg drive)</li>
+    </ul>
+    <p class="animate__animated animate__fadeIn">Trong quá trình làm thắc mắc gì thì hỏi mentor trên group lớp nhé các
+      bạn. Thank all</p>
+    <button class="btn btn-primary animate__animated animate__fadeIn">Bắt đầu</button>
+    <div class="alert alert-success mt-3 animate__animated animate__fadeIn">
+      Đã bắt đầu capstone project. Chúc các bạn thành công!
+    </div>
+  </div>
+
+  <div id="particles-js"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 100, // Số lượng pháo hoa
+          density: {
+            enable: true,
+            value_area: 800,
+          },
+        },
+        color: {
+          value: "#007BFF", // Màu sắc của pháo hoa
+        },
+        shape: {
+          type: "circle", // Hình dạng của pháo hoa (có thể thay đổi)
+        },
+        opacity: {
+          value: 0.6,
+          random: false,
+          anim: {
+            enable: false,
+          },
+        },
+        size: {
+          value: 4, // Kích thước của pháo hoa
+          random: true,
+          anim: {
+            enable: false,
+          },
+        },
+        move: {
+          enable: true,
+          speed: 2, // Tốc độ di chuyển
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: {
+            enable: false,
+            rotateX: 600,
+            rotateY: 1200,
+          },
+        },
+      },
+      interactivity: {
+        detect_on: "window",
+        events: {
+          onhover: {
+            enable: true,
+            mode: "repulse",
+          },
+        },
+        modes: {
+          repulse: {
+            distance: 100,
+            duration: 0.4,
+          },
+        },
+      },
+    });
+  </script>
+
+</body>
+
+</html>
